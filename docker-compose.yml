@@ -7,7 +7,7 @@ services:
       - .:/src
     command: supervisor -e '.' index.js
     ports:
-      - "3000:3000"
+      - "2000:2000"
     depends_on:
       - db
   db:
@@ -25,4 +25,4 @@ services:
     env_file:
       - ./.env
     ports:
-      - "8081:80"
+      - "8085:80"
